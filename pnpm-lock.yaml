@@ -9,10 +9,10 @@ overrides:
 
 specifiers:
   '@size-limit/preset-small-lib': 7.0.8
-  '@testing-library/jest-dom': ^5.16.4
-  '@testing-library/react': ^13.1.1
-  '@testing-library/react-hooks': ^8.0.0
-  '@types/react': ^18.0.6
+  '@testing-library/jest-dom': 5.16.4
+  '@testing-library/react': 13.1.1
+  '@testing-library/react-hooks': 8.0.0
+  '@types/react': 18.0.8
   '@typescript-eslint/eslint-plugin': ^5.20.0
   '@typescript-eslint/parser': ^5.20.0
   eslint: 8.13.0
@@ -21,11 +21,11 @@ specifiers:
   eslint-plugin-prettier: 4.0.0
   eslint-plugin-simple-import-sort: 7.0.0
   husky: 7.0.4
-  jest-environment-jsdom-global: ^3.0.0
+  jest-environment-jsdom-global: 3.0.0
   np: 7.6.1
   prettier: 2.6.2
   react: ^18.0.0
-  react-dom: ^18.0.0
+  react-dom: 18.1.0
   rosetty: ^1.1.5
   size-limit: 7.0.8
   tsdx: 0.14.1
@@ -39,9 +39,9 @@ dependencies:
 devDependencies:
   '@size-limit/preset-small-lib': 7.0.8_size-limit@7.0.8
   '@testing-library/jest-dom': 5.16.4
-  '@testing-library/react': 13.1.1_react-dom@18.0.0+react@18.0.0
-  '@testing-library/react-hooks': 8.0.0_8fc472ebaf0018fcdf7cf55b2750c96e
-  '@types/react': 18.0.6
+  '@testing-library/react': 13.1.1_react-dom@18.1.0+react@18.0.0
+  '@testing-library/react-hooks': 8.0.0_ebfc3f5b169fbd59901d3b8e9e64b493
+  '@types/react': 18.0.8
   '@typescript-eslint/eslint-plugin': 5.20.0_b9ac9b5656ce5dffade639fcf5e491bf
   '@typescript-eslint/parser': 5.20.0_eslint@8.13.0+typescript@4.6.3
   eslint: 8.13.0
@@ -53,7 +53,7 @@ devDependencies:
   jest-environment-jsdom-global: 3.0.0
   np: 7.6.1
   prettier: 2.6.2
-  react-dom: 18.0.0_react@18.0.0
+  react-dom: 18.1.0_react@18.0.0
   size-limit: 7.0.8
   tsdx: 0.14.1
   tslib: 2.3.1
@@ -1799,7 +1799,7 @@ packages:
       redent: 3.0.0
     dev: true
 
-  /@testing-library/react-hooks/8.0.0_8fc472ebaf0018fcdf7cf55b2750c96e:
+  /@testing-library/react-hooks/8.0.0_ebfc3f5b169fbd59901d3b8e9e64b493:
     resolution: {integrity: sha512-uZqcgtcUUtw7Z9N32W13qQhVAD+Xki2hxbTR461MKax8T6Jr8nsUvZB+vcBTkzY2nFvsUet434CsgF0ncW2yFw==}
     engines: {node: '>=12'}
     peerDependencies:
@@ -1816,13 +1816,13 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': 7.17.2
-      '@types/react': 18.0.6
+      '@types/react': 18.0.8
       react: 18.0.0
-      react-dom: 18.0.0_react@18.0.0
+      react-dom: 18.1.0_react@18.0.0
       react-error-boundary: 3.1.4_react@18.0.0
     dev: true
 
-  /@testing-library/react/13.1.1_react-dom@18.0.0+react@18.0.0:
+  /@testing-library/react/13.1.1_react-dom@18.1.0+react@18.0.0:
     resolution: {integrity: sha512-8mirlAa0OKaUvnqnZF6MdAh2tReYA2KtWVw1PKvaF5EcCZqgK5pl8iF+3uW90JdG5Ua2c2c2E2wtLdaug3dsVg==}
     engines: {node: '>=12'}
     peerDependencies:
@@ -1833,7 +1833,7 @@ packages:
       '@testing-library/dom': 8.13.0
       '@types/react-dom': 18.0.2
       react: 18.0.0
-      react-dom: 18.0.0_react@18.0.0
+      react-dom: 18.1.0_react@18.0.0
     dev: true
 
   /@tootallnate/once/1.1.2:
@@ -1976,11 +1976,11 @@ packages:
   /@types/react-dom/18.0.2:
     resolution: {integrity: sha512-UxeS+Wtj5bvLRREz9tIgsK4ntCuLDo0EcAcACgw3E+9wE8ePDr9uQpq53MfcyxyIS55xJ+0B6mDS8c4qkkHLBg==}
     dependencies:
-      '@types/react': 18.0.6
+      '@types/react': 18.0.8
     dev: true
 
-  /@types/react/18.0.6:
-    resolution: {integrity: sha512-bPqwzJRzKtfI0mVYr5R+1o9BOE8UEXefwc1LwcBtfnaAn6OoqMhLa/91VA8aeWfDPJt1kHvYKI8RHcQybZLHHA==}
+  /@types/react/18.0.8:
+    resolution: {integrity: sha512-+j2hk9BzCOrrOSJASi5XiOyBbERk9jG5O73Ya4M0env5Ixi6vUNli4qy994AINcEF+1IEHISYFfIT4zwr++LKw==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
@@ -6869,14 +6869,14 @@ packages:
       strip-json-comments: 2.0.1
     dev: true
 
-  /react-dom/18.0.0_react@18.0.0:
-    resolution: {integrity: sha512-XqX7uzmFo0pUceWFCt7Gff6IyIMzFUn7QMZrbrQfGxtaxXZIcGQzoNpRLE3fQLnS4XzLLPMZX2T9TRcSrasicw==}
+  /react-dom/18.1.0_react@18.0.0:
+    resolution: {integrity: sha512-fU1Txz7Budmvamp7bshe4Zi32d0ll7ect+ccxNu9FlObT605GOEB8BfO4tmRJ39R5Zj831VCpvQ05QPBW5yb+w==}
     peerDependencies:
-      react: ^18.0.0
+      react: ^18.1.0
     dependencies:
       loose-envify: 1.4.0
       react: 18.0.0
-      scheduler: 0.21.0
+      scheduler: 0.22.0
     dev: true
 
   /react-error-boundary/3.1.4_react@18.0.0:
@@ -7240,8 +7240,8 @@ packages:
       xmlchars: 2.2.0
     dev: true
 
-  /scheduler/0.21.0:
-    resolution: {integrity: sha512-1r87x5fz9MXqswA2ERLo0EbOAU74DpIUO090gIasYTqlVoJeMcl+Z1Rg7WHz+qtPujhS/hGIt9kxZOYBV3faRQ==}
+  /scheduler/0.22.0:
+    resolution: {integrity: sha512-6QAm1BgQI88NPYymgGQLCZgvep4FyePDWFpXVK+zNSUgHwlqpJy8VEh8Et0KxTACS4VWwMousBElAZOH9nkkoQ==}
     dependencies:
       loose-envify: 1.4.0
     dev: true

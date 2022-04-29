@@ -1,3 +1,5 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/82e2c932c7dde770cdd4/maintainability)](https://codeclimate.com/github/flexper/rosetty-react/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/82e2c932c7dde770cdd4/test_coverage)](https://codeclimate.com/github/flexper/rosetty-react/test_coverage) ![npm](https://img.shields.io/npm/v/rosetty-react) ![npm](https://img.shields.io/npm/dm/rosetty-react) ![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/rosetty-react) ![NPM](https://img.shields.io/npm/l/rosetty-react)
+
 # Rosetty React
 
 Complete Intl/I18n solution for React

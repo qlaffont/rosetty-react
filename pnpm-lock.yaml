@@ -11,6 +11,7 @@ specifiers:
   '@size-limit/preset-small-lib': 7.0.8
   '@testing-library/jest-dom': ^5.16.4
   '@testing-library/react': ^13.1.1
+  '@testing-library/react-hooks': ^8.0.0
   '@types/react': ^18.0.6
   '@typescript-eslint/eslint-plugin': ^5.20.0
   '@typescript-eslint/parser': ^5.20.0
@@ -20,11 +21,11 @@ specifiers:
   eslint-plugin-prettier: 4.0.0
   eslint-plugin-simple-import-sort: 7.0.0
   husky: 7.0.4
+  jest-environment-jsdom-global: ^3.0.0
   np: 7.6.1
   prettier: 2.6.2
   react: ^18.0.0
   react-dom: ^18.0.0
-  rosetta: ^1.1.0
   rosetty: ^1.1.5
   size-limit: 7.0.8
   tsdx: 0.14.1
@@ -33,13 +34,13 @@ specifiers:
 
 dependencies:
   react: 18.0.0
-  rosetta: 1.1.0
   rosetty: 1.1.5
 
 devDependencies:
   '@size-limit/preset-small-lib': 7.0.8_size-limit@7.0.8
   '@testing-library/jest-dom': 5.16.4
   '@testing-library/react': 13.1.1_react-dom@18.0.0+react@18.0.0
+  '@testing-library/react-hooks': 8.0.0_8fc472ebaf0018fcdf7cf55b2750c96e
   '@types/react': 18.0.6
   '@typescript-eslint/eslint-plugin': 5.20.0_b9ac9b5656ce5dffade639fcf5e491bf
   '@typescript-eslint/parser': 5.20.0_eslint@8.13.0+typescript@4.6.3
@@ -49,6 +50,7 @@ devDependencies:
   eslint-plugin-prettier: 4.0.0_1815ac95b7fb26c13c7d48a8eef62d0f
   eslint-plugin-simple-import-sort: 7.0.0_eslint@8.13.0
   husky: 7.0.4
+  jest-environment-jsdom-global: 3.0.0
   np: 7.6.1
   prettier: 2.6.2
   react-dom: 18.0.0_react@18.0.0
@@ -1795,6 +1797,29 @@ packages:
       dom-accessibility-api: 0.5.13
       lodash: 4.17.21
       redent: 3.0.0
+    dev: true
+
+  /@testing-library/react-hooks/8.0.0_8fc472ebaf0018fcdf7cf55b2750c96e:
+    resolution: {integrity: sha512-uZqcgtcUUtw7Z9N32W13qQhVAD+Xki2hxbTR461MKax8T6Jr8nsUvZB+vcBTkzY2nFvsUet434CsgF0ncW2yFw==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      '@types/react': ^16.9.0 || ^17.0.0
+      react: ^16.9.0 || ^17.0.0
+      react-dom: ^16.9.0 || ^17.0.0
+      react-test-renderer: ^16.9.0 || ^17.0.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      react-dom:
+        optional: true
+      react-test-renderer:
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.17.2
+      '@types/react': 18.0.6
+      react: 18.0.0
+      react-dom: 18.0.0_react@18.0.0
+      react-error-boundary: 3.1.4_react@18.0.0
     dev: true
 
   /@testing-library/react/13.1.1_react-dom@18.0.0+react@18.0.0:
@@ -5229,6 +5254,13 @@ packages:
       pretty-format: 27.5.1
     dev: true
 
+  /jest-environment-jsdom-global/3.0.0:
+    resolution: {integrity: sha512-+7ZNxuB/35ybGug9vMaBYontqI7T8KhnUU55wtT5OYw6GRfDn2Vzak2YRvBwFjdm0so0Qz7KAL6NtEB0r+3x+g==}
+    engines: {node: '>= 12'}
+    peerDependencies:
+      jest-environment-jsdom: 22.x || 23.x || 24.x || 25.x || 26.x || 27.x
+    dev: true
+
   /jest-environment-jsdom/27.5.1:
     resolution: {integrity: sha512-TFBvkTC1Hnnnrka/fUb56atfDtJ9VMZ94JkjTbggl1PEpwrYtUBKMezB3inLmWqQsXYLcMwNoDQwoBTAvFfsfw==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
@@ -6845,6 +6877,16 @@ packages:
       loose-envify: 1.4.0
       react: 18.0.0
       scheduler: 0.21.0
+    dev: true
+
+  /react-error-boundary/3.1.4_react@18.0.0:
+    resolution: {integrity: sha512-uM9uPzZJTF6wRQORmSrvOIgt4lJ9MC1sNgEOj2XGsDTRE4kmpWxg7ENK9EWNKJRMAOY9z0MuF4yIfl6gp4sotA==}
+    engines: {node: '>=10', npm: '>=6'}
+    peerDependencies:
+      react: '>=16.13.1'
+    dependencies:
+      '@babel/runtime': 7.17.2
+      react: 18.0.0
     dev: true
 
   /react-is/16.13.1:

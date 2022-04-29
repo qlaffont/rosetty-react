@@ -68,6 +68,7 @@
     "@size-limit/preset-small-lib": "7.0.8",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
+    "@testing-library/react-hooks": "^8.0.0",
     "@types/react": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "5.20.0",
     "@typescript-eslint/parser": "5.20.0",
@@ -77,6 +78,7 @@
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-simple-import-sort": "7.0.0",
     "husky": "7.0.4",
+    "jest-environment-jsdom-global": "^3.0.0",
     "np": "7.6.1",
     "prettier": "2.6.2",
     "react-dom": "^18.0.0",
@@ -87,7 +89,6 @@
   },
   "dependencies": {
     "react": "^18.0.0",
-    "rosetta": "^1.1.0",
     "rosetty": "^1.1.5"
   }
 }

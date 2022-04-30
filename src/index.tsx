@@ -5,7 +5,7 @@ import {
   rosetty,
   RosettyReturn,
 } from 'rosetty';
-import { Locales } from 'rosetty/dist/types.';
+import { Locales } from 'rosetty/dist/types';
 
 export const I18nContext = createContext({});
 

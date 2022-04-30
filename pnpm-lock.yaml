@@ -26,7 +26,7 @@ specifiers:
   prettier: 2.6.2
   react: ^18.0.0
   react-dom: 18.1.0
-  rosetty: ^1.1.5
+  rosetty: ^1.2.0
   size-limit: 7.0.8
   tsdx: 0.14.1
   tslib: 2.4.0
@@ -34,7 +34,7 @@ specifiers:
 
 dependencies:
   react: 18.0.0
-  rosetty: 1.1.5
+  rosetty: 1.2.0
 
 devDependencies:
   '@size-limit/preset-small-lib': 7.0.8_size-limit@7.0.8
@@ -7183,8 +7183,8 @@ packages:
       templite: 1.2.0
     dev: false
 
-  /rosetty/1.1.5:
-    resolution: {integrity: sha512-eV2mkqFql90iYLRuQbUWqTORCiCpJi28f/GCY+ut2Jo5V2gSZFpZo+0yGrqu+AxebmSq5PkW8pc//q6UPR/47g==}
+  /rosetty/1.2.0:
+    resolution: {integrity: sha512-dUzhEbY7yJ1ZAQpHOJpDI+tlUZbbLOIf956sEMb4068h4+vrV57XkmjHVvMtJ39LiRioznyfJBw6tGHwABcYHw==}
     engines: {node: '>=10'}
     dependencies:
       '@formatjs/ecma402-abstract': 1.11.4

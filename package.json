@@ -89,6 +89,6 @@
   },
   "dependencies": {
     "react": "^18.0.0",
-    "rosetty": "^1.2.0"
+    "rosetty": "^1.1.10"
   }
 }

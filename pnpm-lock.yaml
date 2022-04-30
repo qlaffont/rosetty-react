@@ -26,7 +26,7 @@ specifiers:
   prettier: 2.6.2
   react: ^18.0.0
   react-dom: 18.1.0
-  rosetty: ^1.2.0
+  rosetty: ^1.1.10
   size-limit: 7.0.8
   tsdx: 0.14.1
   tslib: 2.4.0

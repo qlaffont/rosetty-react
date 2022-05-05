@@ -5,8 +5,7 @@
 // Importing the jest testing library
 import '@testing-library/jest-dom';
 
-import { cleanup } from '@testing-library/react';
-import { renderHook } from '@testing-library/react-hooks';
+import { cleanup, renderHook } from '@testing-library/react';
 import React from 'react';
 
 // MUTE console error
@@ -73,12 +72,13 @@ describe('rosetty react', () => {
       </I18NContextProvider>
     );
 
-    const r = renderHook(() => useI18n(), {
-      wrapper: wrongWrapperLanguageNotValid,
-    });
-
-    expect(r.result.error?.toString()).toBe(
-      'Error: rosetty: language en not found'
-    );
+    try {
+      renderHook(() => useI18n(), {
+        wrapper: wrongWrapperLanguageNotValid,
+      });
+    } catch (error) {
+      //@ts-ignore
+      expect(error.message).toBe('rosetty: language en not found');
+    }
   });
 });

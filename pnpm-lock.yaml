@@ -3,8 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@size-limit/preset-small-lib': 7.0.8
   '@testing-library/jest-dom': 5.16.4
-  '@testing-library/react': 13.1.1
-  '@testing-library/react-hooks': 8.0.0
+  '@testing-library/react': 13.2.0
   '@types/react': 18.0.8
   '@typescript-eslint/eslint-plugin': 5.21.0
   '@typescript-eslint/parser': 5.21.0
@@ -14,7 +13,7 @@ specifiers:
   eslint-plugin-prettier: 4.0.0
   eslint-plugin-simple-import-sort: 7.0.0
   husky: 7.0.4
-  jest: 28.0.0
+  jest: 28.0.3
   np: 7.6.1
   prettier: 2.6.2
   react: 18.1.0
@@ -31,8 +30,7 @@ dependencies:
 devDependencies:
   '@size-limit/preset-small-lib': 7.0.8_size-limit@7.0.8
   '@testing-library/jest-dom': 5.16.4
-  '@testing-library/react': 13.1.1_react-dom@18.1.0+react@18.1.0
-  '@testing-library/react-hooks': 8.0.0_47ae209ab5c2ea051c9a2540426c6b2f
+  '@testing-library/react': 13.2.0_react-dom@18.1.0+react@18.1.0
   '@types/react': 18.0.8
   '@typescript-eslint/eslint-plugin': 5.21.0_ade6595cb7be1524e723c025c098ae5d
   '@typescript-eslint/parser': 5.21.0_eslint@8.14.0+typescript@4.6.4
@@ -42,7 +40,7 @@ devDependencies:
   eslint-plugin-prettier: 4.0.0_665eb419c9d7860ca0c224f7f6dcdace
   eslint-plugin-simple-import-sort: 7.0.0_eslint@8.14.0
   husky: 7.0.4
-  jest: 28.0.0
+  jest: 28.0.3
   np: 7.6.1
   prettier: 2.6.2
   react: 18.1.0
@@ -58,7 +56,7 @@ packages:
     resolution: {integrity: sha512-hoyByceqwKirw7w3Z7gnIIZC3Wx3J484Y3L/cMpXFbr7d9ZQj2mODrirNzcJa+SM3UlpWXYvKV4RlRpFXlWgXg==}
     engines: {node: '>=6.0.0'}
     dependencies:
-      '@jridgewell/trace-mapping': 0.3.4
+      '@jridgewell/trace-mapping': 0.3.9
     dev: true
 
   /@babel/code-frame/7.16.7:
@@ -1704,13 +1702,6 @@ packages:
     resolution: {integrity: sha512-Fg32GrJo61m+VqYSdRSjRXMjQ06j8YIYfcTqndLYVAaHmroZHLJZCydsWBOTDqXS2v+mjxohBWEMfg97GXmYQg==}
     dev: true
 
-  /@jridgewell/trace-mapping/0.3.4:
-    resolution: {integrity: sha512-vFv9ttIedivx0ux3QSjhgtCVjPZd5l46ZOMDSCwnH1yUO2e964gO8LZGyv2QkqcgR6TnBU1v+1IFqmeoG+0UJQ==}
-    dependencies:
-      '@jridgewell/resolve-uri': 3.0.5
-      '@jridgewell/sourcemap-codec': 1.4.11
-    dev: true
-
   /@jridgewell/trace-mapping/0.3.9:
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
     dependencies:
@@ -1939,31 +1930,8 @@ packages:
       redent: 3.0.0
     dev: true
 
-  /@testing-library/react-hooks/8.0.0_47ae209ab5c2ea051c9a2540426c6b2f:
-    resolution: {integrity: sha512-uZqcgtcUUtw7Z9N32W13qQhVAD+Xki2hxbTR461MKax8T6Jr8nsUvZB+vcBTkzY2nFvsUet434CsgF0ncW2yFw==}
-    engines: {node: '>=12'}
-    peerDependencies:
-      '@types/react': ^16.9.0 || ^17.0.0
-      react: ^16.9.0 || ^17.0.0
-      react-dom: ^16.9.0 || ^17.0.0
-      react-test-renderer: ^16.9.0 || ^17.0.0
-    peerDependenciesMeta:
-      '@types/react':
-        optional: true
-      react-dom:
-        optional: true
-      react-test-renderer:
-        optional: true
-    dependencies:
-      '@babel/runtime': 7.17.2
-      '@types/react': 18.0.8
-      react: 18.1.0
-      react-dom: 18.1.0_react@18.1.0
-      react-error-boundary: 3.1.4_react@18.1.0
-    dev: true
-
-  /@testing-library/react/13.1.1_react-dom@18.1.0+react@18.1.0:
-    resolution: {integrity: sha512-8mirlAa0OKaUvnqnZF6MdAh2tReYA2KtWVw1PKvaF5EcCZqgK5pl8iF+3uW90JdG5Ua2c2c2E2wtLdaug3dsVg==}
+  /@testing-library/react/13.2.0_react-dom@18.1.0+react@18.1.0:
+    resolution: {integrity: sha512-Bprbz/SZVONCJy5f7hcihNCv313IJXdYiv0nSJklIs1SQCIHHNlnGNkosSXnGZTmesyGIcBGNppYhXcc11pb7g==}
     engines: {node: '>=12'}
     peerDependencies:
       react: ^18.0.0
@@ -6627,9 +6595,9 @@ packages:
       - utf-8-validate
     dev: true
 
-  /jest/28.0.0:
-    resolution: {integrity: sha512-Zl07FoxrV6em3/sBqSRepHWBtcqJ3BKbwmZ1CyeuHPKkSjhOqUEG/OcuJd/5pKP3wqRovoF6aHR1ID+2Qz/ufQ==}
-    engines: {node: ^12.13.0 || ^14.15.0 || ^16.13.0 || >=17.0.0}
+  /jest/28.0.3:
+    resolution: {integrity: sha512-uS+T5J3w5xyzd1KSJCGKhCo8WTJXbNl86f5SW11wgssbandJOVLRKKUxmhdFfmKxhPeksl1hHZ0HaA8VBzp7xA==}
+    engines: {node: ^12.13.0 || ^14.15.0 || ^16.10.0 || >=17.0.0}
     hasBin: true
     peerDependencies:
       node-notifier: ^8.0.1 || ^9.0.0 || ^10.0.0
@@ -8066,16 +8034,6 @@ packages:
       loose-envify: 1.4.0
       react: 18.1.0
       scheduler: 0.22.0
-    dev: true
-
-  /react-error-boundary/3.1.4_react@18.1.0:
-    resolution: {integrity: sha512-uM9uPzZJTF6wRQORmSrvOIgt4lJ9MC1sNgEOj2XGsDTRE4kmpWxg7ENK9EWNKJRMAOY9z0MuF4yIfl6gp4sotA==}
-    engines: {node: '>=10', npm: '>=6'}
-    peerDependencies:
-      react: '>=16.13.1'
-    dependencies:
-      '@babel/runtime': 7.17.2
-      react: 18.1.0
     dev: true
 
   /react-is/16.13.1:

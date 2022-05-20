@@ -7,9 +7,9 @@ import {
 } from 'rosetty';
 import { Locales } from 'rosetty/dist/types';
 
-export const I18nContext = createContext({});
+export const RosettyContext = createContext({});
 
-export const I18nHOC = ({
+export const RosettyProvider = ({
   children,
   languages,
   defaultLanguage,
@@ -19,11 +19,13 @@ export const I18nHOC = ({
   defaultLanguage: string;
 }) => {
   const r = rosetty(languages, defaultLanguage);
-  return <I18nContext.Provider value={r}>{children}</I18nContext.Provider>;
+  return (
+    <RosettyContext.Provider value={r}>{children}</RosettyContext.Provider>
+  );
 };
 
-export function useI18n<T>(): RosettyReturn<T> {
-  return useContext(I18nContext) as RosettyReturn<T>;
+export function useRosetty<T>(): RosettyReturn<T> {
+  return useContext(RosettyContext) as RosettyReturn<T>;
 }
 
 export const locales: Locales = rosettyLocales;

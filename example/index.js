@@ -1,24 +1,24 @@
 //In your app.js file, add the following code:
 
-import { I18nHOC, locales as rosettyLocales } from 'rosetty-react';
+import { locales as rosettyLocales, RosettyProvider } from 'rosetty-react';
 
 const locales = { fr: { dict: {}, locale: rosettyLocales.fr } };
 const defaultLanguage = 'fr';
 
 const App = ({ children }) => (
-  <I18nHOC locales={locales} defaultLanguage={defaultLanguage}>
+  <RosettyProvider locales={locales} defaultLanguage={defaultLanguage}>
     {children}
-  </I18nHOC>
+  </RosettyProvider>
 );
 
 module.exports = App;
 
 //In your components file, add the following code:
 
-import { useI18n } from 'rosetty-react';
+import { useRosetty } from 'rosetty-react';
 
 const Home = () => {
-  const { t } = useI18n();
+  const { t } = useRosetty();
   return <h1>{t('home')}</h1>;
 };
 

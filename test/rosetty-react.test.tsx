@@ -12,12 +12,12 @@ import React from 'react';
 // eslint-disable-next-line @typescript-eslint/no-empty-function
 console.error = () => {};
 
-import { I18nContext, I18nHOC, locales, useI18n } from '../src';
+import { locales, RosettyContext, RosettyProvider, useRosetty } from '../src';
 //@ts-ignore
 const I18NContextProvider = ({ children, languages, defaultLanguage }) => (
-  <I18nHOC languages={languages} defaultLanguage={defaultLanguage}>
+  <RosettyProvider languages={languages} defaultLanguage={defaultLanguage}>
     {children}
-  </I18nHOC>
+  </RosettyProvider>
 );
 
 afterEach(() => {
@@ -26,9 +26,9 @@ afterEach(() => {
 
 describe('rosetty react', () => {
   it('should export useI18n + HOC + context', () => {
-    expect(typeof useI18n).toBe('function');
-    expect(typeof I18nHOC).toBe('function');
-    expect(typeof I18nContext).toBe('object');
+    expect(typeof useRosetty).toBe('function');
+    expect(typeof RosettyProvider).toBe('function');
+    expect(typeof RosettyContext).toBe('object');
   });
 
   it('should be able to use i18n', () => {
@@ -41,7 +41,7 @@ describe('rosetty react', () => {
         {children}
       </I18NContextProvider>
     );
-    const { result } = renderHook(() => useI18n(), { wrapper });
+    const { result } = renderHook(() => useRosetty(), { wrapper });
 
     expect(result.current.languages).toStrictEqual(['fr']);
     expect(Object.keys(result.current)).toStrictEqual([
@@ -73,7 +73,7 @@ describe('rosetty react', () => {
     );
 
     try {
-      renderHook(() => useI18n(), {
+      renderHook(() => useRosetty(), {
         wrapper: wrongWrapperLanguageNotValid,
       });
     } catch (error) {

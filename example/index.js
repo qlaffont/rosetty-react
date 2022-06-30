@@ -13,12 +13,23 @@ const App = ({ children }) => (
 
 module.exports = App;
 
-//In your components file, add the following code:
-
+//Create a hook called useI18n
 import { useRosetty } from 'rosetty-react';
 
+import frDict from '../i18n/fr';
+
+export const useI18n = () => {
+  return useRosetty<typeof frDict>(); //Enable autocompletion base on you translation file
+};
+
+
+//In your components file, add the following code:
+
+import { useI18n } from '../libs/useI18n';
+
 const Home = () => {
-  const { t } = useRosetty();
+  const { t } = useI18n();
+
   return <h1>{t('home')}</h1>;
 };
 

@@ -2,10 +2,10 @@ import React, { createContext, useContext } from 'react';
 import {
   Language,
   locales as rosettyLocales,
+  Locales,
   rosetty,
   RosettyReturn,
 } from 'rosetty';
-import { Locales } from 'rosetty/dist/types';
 
 export const RosettyContext = createContext({});
 

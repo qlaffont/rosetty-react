@@ -1,8 +1,8 @@
 import React, { createContext, useContext } from 'react';
 import {
   Language,
-  locales as rosettyLocales,
   Locales,
+  locales as rosettyLocales,
   rosetty,
   RosettyReturn,
 } from 'rosetty';

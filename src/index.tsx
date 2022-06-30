@@ -29,3 +29,4 @@ export function useRosetty<T>(): RosettyReturn<T> {
 }
 
 export const locales: Locales = rosettyLocales;
+export type Rosetty<T> = RosettyReturn<T>;

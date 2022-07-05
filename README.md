@@ -46,7 +46,7 @@ module.exports = Home;
 | locales         | Record<string, Language> | Specify dictionnary and locale to use for each lang            |
 | defaultLanguage | string?                  | Specify default language to use (should be the same as config) |
 
-Return: Rosetty Context HOC
+Return: Rosetty Context HOC + {actualLang: string} who contain your current language
 
 Return a component who instantiate the Rosetty Context.
 

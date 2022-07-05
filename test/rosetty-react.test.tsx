@@ -58,6 +58,7 @@ describe('rosetty react', () => {
       'formatDistance',
       'formatDistanceToNow',
       'formatDuration',
+      'actualLang',
     ]);
   });
 
@@ -80,5 +81,27 @@ describe('rosetty react', () => {
       //@ts-ignore
       expect(error.message).toBe('rosetty: language en not found');
     }
+  });
+
+  it('should be able to return actualLang', () => {
+    //@ts-ignore
+    const wrapper = ({ children }) => (
+      <I18NContextProvider
+        languages={{
+          fr: { dict: {}, locale: locales.fr },
+          en: { dict: {}, locale: locales.enGB },
+        }}
+        defaultLanguage="en"
+      >
+        {children}
+      </I18NContextProvider>
+    );
+
+    const { result, rerender } = renderHook(() => useRosetty(), { wrapper });
+
+    expect(result.current.actualLang).toStrictEqual('en');
+    result.current.changeLang('fr');
+    rerender();
+    expect(result.current.actualLang).toStrictEqual('fr');
   });
 });

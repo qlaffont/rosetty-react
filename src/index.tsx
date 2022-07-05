@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 import {
   Language,
   Locales,
@@ -19,13 +19,31 @@ export const RosettyProvider = ({
   defaultLanguage: string;
 }) => {
   const r = rosetty(languages, defaultLanguage);
+  const [actualLang, setActualLang] = useState(defaultLanguage);
+
   return (
-    <RosettyContext.Provider value={r}>{children}</RosettyContext.Provider>
+    <RosettyContext.Provider
+      value={{
+        ...r,
+        actualLang,
+        changeLang: (lang: string) => {
+          r.changeLang(lang);
+          // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+          setActualLang(r.getCurrentLang()!);
+        },
+      }}
+    >
+      {children}
+    </RosettyContext.Provider>
   );
 };
 
-export function useRosetty<T>(): RosettyReturn<T> {
-  return useContext(RosettyContext) as RosettyReturn<T>;
+export function useRosetty<T>(): RosettyReturn<T> & {
+  actualLang: string | undefined;
+} {
+  return useContext(RosettyContext) as RosettyReturn<T> & {
+    actualLang: string | undefined;
+  };
 }
 
 export const locales: Locales = rosettyLocales;

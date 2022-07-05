@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useMemo, useState } from 'react';
 import {
   Language,
   Locales,
@@ -18,21 +18,24 @@ export const RosettyProvider = ({
   languages: Record<string, Language>;
   defaultLanguage: string;
 }) => {
-  const r = rosetty(languages, defaultLanguage);
+  const r = useMemo(() => rosetty(languages, defaultLanguage), []);
   const [actualLang, setActualLang] = useState(defaultLanguage);
 
+  const providerReturn = useMemo(
+    () => ({
+      ...r,
+      actualLang,
+      changeLang: (lang: string) => {
+        r.changeLang(lang);
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+        setActualLang(r.getCurrentLang()!);
+      },
+    }),
+    [actualLang]
+  );
+
   return (
-    <RosettyContext.Provider
-      value={{
-        ...r,
-        actualLang,
-        changeLang: (lang: string) => {
-          r.changeLang(lang);
-          // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-          setActualLang(r.getCurrentLang()!);
-        },
-      }}
-    >
+    <RosettyContext.Provider value={providerReturn}>
       {children}
     </RosettyContext.Provider>
   );

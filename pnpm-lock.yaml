@@ -19,7 +19,7 @@ specifiers:
   react: 18.2.0
   react-dom: 18.2.0
   rosetty: ^1.3.25
-  size-limit: 8.0.0
+  size-limit: 8.0.1
   tsdx: 0.14.1
   tslib: 2.4.0
   typescript: 4.7.4
@@ -28,7 +28,7 @@ dependencies:
   rosetty: 1.3.25
 
 devDependencies:
-  '@size-limit/preset-small-lib': 8.0.1_size-limit@8.0.0
+  '@size-limit/preset-small-lib': 8.0.1_size-limit@8.0.1
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 13.3.0_react-dom@18.2.0+react@18.2.0
   '@types/react': 18.0.17
@@ -45,7 +45,7 @@ devDependencies:
   prettier: 2.7.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
-  size-limit: 8.0.0
+  size-limit: 8.0.1
   tsdx: 0.14.1
   tslib: 2.4.0
   typescript: 4.7.4
@@ -1879,7 +1879,7 @@ packages:
       '@sinonjs/commons': 1.8.3
     dev: true
 
-  /@size-limit/esbuild/8.0.1_size-limit@8.0.0:
+  /@size-limit/esbuild/8.0.1_size-limit@8.0.1:
     resolution: {integrity: sha512-EnfRweoQc4P91G45sPfzAWMVPibK5SEV6sUWC46DcGlT9xrYeCQYtInbsny1/lSorC/sfJKN84aGm4A+q6SgOw==}
     engines: {node: ^14.0.0 || ^16.0.0 || >=18.0.0}
     peerDependencies:
@@ -1887,27 +1887,27 @@ packages:
     dependencies:
       esbuild: 0.15.1
       nanoid: 3.3.4
-      size-limit: 8.0.0
+      size-limit: 8.0.1
     dev: true
 
-  /@size-limit/file/8.0.1_size-limit@8.0.0:
+  /@size-limit/file/8.0.1_size-limit@8.0.1:
     resolution: {integrity: sha512-kwgc5UJQIz5qbRow3atSiW2K7vEIIw4DelT4WLn09cOwcJgWs82Imgz2UqVivHJmCisn/ltPjT4qmxaDfjFflw==}
     engines: {node: ^14.0.0 || ^16.0.0 || >=18.0.0}
     peerDependencies:
       size-limit: 8.0.1
     dependencies:
       semver: 7.3.7
-      size-limit: 8.0.0
+      size-limit: 8.0.1
     dev: true
 
-  /@size-limit/preset-small-lib/8.0.1_size-limit@8.0.0:
+  /@size-limit/preset-small-lib/8.0.1_size-limit@8.0.1:
     resolution: {integrity: sha512-EV+UXGZJU9kiT8R4N9dxjRAJ37tzjuP+e2DfpRtv7cx1ErFiB6k//wEhw9nLmJMWWhfvcVEvJYyKm3+i0pbWUQ==}
     peerDependencies:
       size-limit: 8.0.1
     dependencies:
-      '@size-limit/esbuild': 8.0.1_size-limit@8.0.0
-      '@size-limit/file': 8.0.1_size-limit@8.0.0
-      size-limit: 8.0.0
+      '@size-limit/esbuild': 8.0.1_size-limit@8.0.1
+      '@size-limit/file': 8.0.1_size-limit@8.0.1
+      size-limit: 8.0.1
     dev: true
 
   /@szmarczak/http-timer/1.1.2:
@@ -8769,8 +8769,8 @@ packages:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
     dev: true
 
-  /size-limit/8.0.0:
-    resolution: {integrity: sha512-344dzCZZiTz+N0WS801SNG/qd8MCa6dzJhsj8gLQg4JlmddwUdi/Ol0HfliEVL7jgtOz8fNgDeB2+14xwalvVA==}
+  /size-limit/8.0.1:
+    resolution: {integrity: sha512-VHrozqkQTYfcv1OlZIRIL0x6f+xhZ3TT+RTXC5AvKn/yA+3PIWERrKWqHMJPD7G/Vi0SuBtWAn3IvCGx2/UB1g==}
     engines: {node: ^14.0.0 || ^16.0.0 || >=18.0.0}
     hasBin: true
     dependencies:

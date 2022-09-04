@@ -3,7 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@size-limit/preset-small-lib': 8.0.1
   '@testing-library/jest-dom': 5.16.5
-  '@testing-library/react': 13.3.0
+  '@testing-library/react': 13.4.0
   '@types/react': 18.0.18
   '@typescript-eslint/eslint-plugin': 5.36.1
   '@typescript-eslint/parser': 5.36.1
@@ -30,7 +30,7 @@ dependencies:
 devDependencies:
   '@size-limit/preset-small-lib': 8.0.1_size-limit@8.0.1
   '@testing-library/jest-dom': 5.16.5
-  '@testing-library/react': 13.3.0_react-dom@18.2.0+react@18.2.0
+  '@testing-library/react': 13.4.0_react-dom@18.2.0+react@18.2.0
   '@types/react': 18.0.18
   '@typescript-eslint/eslint-plugin': 5.36.1_586c56b3bc76dec8ef0f241fb0cda488
   '@typescript-eslint/parser': 5.36.1_eslint@8.23.0+typescript@4.8.2
@@ -1968,8 +1968,8 @@ packages:
       redent: 3.0.0
     dev: true
 
-  /@testing-library/react/13.3.0_react-dom@18.2.0+react@18.2.0:
-    resolution: {integrity: sha512-DB79aA426+deFgGSjnf5grczDPiL4taK3hFaa+M5q7q20Kcve9eQottOG5kZ74KEr55v0tU2CQormSSDK87zYQ==}
+  /@testing-library/react/13.4.0_react-dom@18.2.0+react@18.2.0:
+    resolution: {integrity: sha512-sXOGON+WNTh3MLE9rve97ftaZukN3oNf2KjDy7YTx6hcTO2uuLHuCGynMDhFwGw/jYf4OJ2Qk0i4i79qMNNkyw==}
     engines: {node: '>=12'}
     peerDependencies:
       react: ^18.0.0
@@ -7179,7 +7179,7 @@ packages:
     dev: true
 
   /lz-string/1.4.4:
-    resolution: {integrity: sha1-wNjq82BZ9wV5bh40SBHPTEmNOiY=}
+    resolution: {integrity: sha512-0ckx7ZHRPqb0oUm8zNr+90mtf9DQB60H1wMCjBtfi62Kl3a7JbHob6gA2bC+xRvZoOL+1hzUK8jeuEIQE8svEQ==}
     hasBin: true
     dev: true
 

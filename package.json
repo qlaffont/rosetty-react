@@ -1,5 +1,5 @@
 {
-  "version": "1.3.52",
+  "version": "1.4.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -81,6 +81,6 @@
     "typescript": "4.8.4"
   },
   "dependencies": {
-    "rosetty": "^1.3.25"
+    "rosetty": "^1.4.0"
   }
 }

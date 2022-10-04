@@ -13,12 +13,17 @@ export const RosettyProvider = ({
   children,
   languages,
   defaultLanguage,
+  translateFallback,
 }: {
   children: React.ReactNode;
   languages: Record<string, Language>;
   defaultLanguage: string;
+  translateFallback?: boolean;
 }) => {
-  const r = useMemo(() => rosetty(languages, defaultLanguage), []);
+  const r = useMemo(
+    () => rosetty(languages, defaultLanguage, translateFallback),
+    []
+  );
   const [actualLang, setActualLang] = useState(defaultLanguage);
 
   const providerReturn = useMemo(
@@ -41,7 +46,9 @@ export const RosettyProvider = ({
   );
 };
 
-export function useRosetty<T>(): RosettyReturn<T> & {
+type AnyObject = Record<string, any>;
+
+export function useRosetty<T extends AnyObject>(): RosettyReturn<T> & {
   actualLang: string | undefined;
 } {
   return useContext(RosettyContext) as RosettyReturn<T> & {
@@ -50,4 +57,4 @@ export function useRosetty<T>(): RosettyReturn<T> & {
 }
 
 export const locales: Locales = rosettyLocales;
-export type Rosetty<T> = RosettyReturn<T>;
+export type Rosetty<T extends AnyObject> = RosettyReturn<T>;

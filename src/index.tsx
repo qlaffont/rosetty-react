@@ -36,7 +36,7 @@ export const RosettyProvider = ({
         setActualLang(r.getCurrentLang()!);
       },
     }),
-    [actualLang]
+    [actualLang, r]
   );
 
   return (

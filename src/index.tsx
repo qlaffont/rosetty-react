@@ -22,7 +22,7 @@ export const RosettyProvider = ({
 }) => {
   const r = useMemo(
     () => rosetty(languages, defaultLanguage, translateFallback),
-    []
+    [languages]
   );
   const [actualLang, setActualLang] = useState(defaultLanguage);
 

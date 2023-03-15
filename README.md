@@ -2,7 +2,7 @@
 
 # Rosetty React
 
-Complete Intl/I18n solution for React base on [Rosetty](https://github.com/flexper/rosetty)
+Complete Intl/I18n solution for React based on [Rosetty](https://github.com/flexper/rosetty)
 
 ## Usage
 

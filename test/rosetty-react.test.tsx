@@ -5,6 +5,10 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // Importing the jest testing library
 import '@testing-library/jest-dom';
+//@ts-ignore
+import fr from 'dayjs/locale/fr';
+//@ts-ignore
+import enGB from 'dayjs/locale/en-gb';
 
 import { cleanup, renderHook } from '@testing-library/react';
 import React from 'react';
@@ -13,7 +17,7 @@ import React from 'react';
 // eslint-disable-next-line @typescript-eslint/no-empty-function
 console.error = () => {};
 
-import { locales, RosettyContext, RosettyProvider, useRosetty } from '../src';
+import { RosettyContext, RosettyProvider, useRosetty } from '../src';
 //@ts-ignore
 const I18NContextProvider = ({ children, languages, defaultLanguage }) => (
   <RosettyProvider languages={languages} defaultLanguage={defaultLanguage}>
@@ -36,7 +40,7 @@ describe('rosetty react', () => {
     //@ts-ignore
     const wrapper = ({ children }) => (
       <I18NContextProvider
-        languages={{ fr: { dict: {}, locale: locales.fr } }}
+        languages={{ fr: { dict: {}, locale: fr } }}
         defaultLanguage="fr"
       >
         {children}
@@ -67,7 +71,7 @@ describe('rosetty react', () => {
     //@ts-ignore
     const wrongWrapperLanguageNotValid = ({ children }) => (
       <I18NContextProvider
-        languages={{ fr: { dict: {}, locale: locales.fr } }}
+        languages={{ fr: { dict: {}, locale: fr } }}
         defaultLanguage="en"
       >
         {children}
@@ -89,8 +93,8 @@ describe('rosetty react', () => {
     const wrapper = ({ children }) => (
       <I18NContextProvider
         languages={{
-          fr: { dict: {}, locale: locales.fr },
-          en: { dict: {}, locale: locales.enGB },
+          fr: { dict: {}, locale: fr },
+          en: { dict: {}, locale: enGB },
         }}
         defaultLanguage="en"
       >

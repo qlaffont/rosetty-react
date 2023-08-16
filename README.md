@@ -9,9 +9,10 @@ Complete Intl/I18n solution for React based on [Rosetty](https://github.com/flex
 ```js
 //In your app.js file, add the following code:
 
-import { RosettyProvider, locales as rosettyLocales } from 'rosetty-react';
+import { RosettyProvider } from 'rosetty-react';
+import fr from 'dayjs/locale/fr';
 
-const locales = { fr: { dict: {}, locale: rosettyLocales.fr } };
+const locales = { fr: { dict: {}, locale: fr } };
 const defaultLanguage = 'fr';
 
 const App = ({ children }) => (
@@ -50,11 +51,13 @@ Return: Rosetty Context HOC + {actualLang: string} who contain your current lang
 
 Return a component who instantiate the Rosetty Context.
 
-### locales
+### WARNING FOR LOCALE !
 
-Return: Record<string, Locale>
+**You need to import locale from `dayjs` package.**
 
-Return I18n locales from rosetty
+```js
+const fr = require('dayjs/locale/fr');
+```
 
 ## Maintain
 

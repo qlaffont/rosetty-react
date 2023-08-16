@@ -2,8 +2,6 @@
 import React, { createContext, useContext, useMemo, useState } from 'react';
 import {
   Language,
-  Locales,
-  locales as rosettyLocales,
   rosetty,
   RosettyReturn,
 } from 'rosetty';
@@ -57,5 +55,4 @@ export function useRosetty<T extends AnyObject>(): RosettyReturn<T> & {
   };
 }
 
-export const locales: Locales = rosettyLocales;
 export type Rosetty<T extends AnyObject> = RosettyReturn<T>;

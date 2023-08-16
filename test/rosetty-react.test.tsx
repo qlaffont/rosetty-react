@@ -5,12 +5,12 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // Importing the jest testing library
 import '@testing-library/jest-dom';
-//@ts-ignore
-import fr from 'dayjs/locale/fr';
-//@ts-ignore
-import enGB from 'dayjs/locale/en-gb';
 
 import { cleanup, renderHook } from '@testing-library/react';
+//@ts-ignore
+import enGB from 'dayjs/locale/en-gb';
+//@ts-ignore
+import fr from 'dayjs/locale/fr';
 import React from 'react';
 
 // MUTE console error

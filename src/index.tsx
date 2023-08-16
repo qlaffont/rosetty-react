@@ -1,10 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { createContext, useContext, useMemo, useState } from 'react';
-import {
-  Language,
-  rosetty,
-  RosettyReturn,
-} from 'rosetty';
+import { Language, rosetty, RosettyReturn } from 'rosetty';
 
 export const RosettyContext = createContext({});
 

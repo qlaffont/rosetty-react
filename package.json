@@ -5,11 +5,11 @@
   "typings": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/flexper/rosetty-react.git"
+    "url": "https://github.com/qlaffont/rosetty-react.git"
   },
   "bugs": {
-    "url": "https://github.com/flexper/rosetty-react/issues",
-    "email": "contact@flexper.fr"
+    "url": "https://github.com/qlaffont/rosetty-react/issues",
+    "email": "contact@qlaffont.com"
   },
   "files": [
     "dist",
@@ -39,7 +39,7 @@
     "trailingComma": "es5"
   },
   "name": "rosetty-react",
-  "author": "Flexper",
+  "author": "qlaffont",
   "module": "dist/rosetty-react.esm.js",
   "size-limit": [
     {

@@ -7,10 +7,7 @@
 import '@testing-library/jest-dom';
 
 import { cleanup, renderHook } from '@testing-library/react';
-//@ts-ignore
-import enGB from 'dayjs/locale/en-gb';
-//@ts-ignore
-import fr from 'dayjs/locale/fr';
+import { enGB, fr } from 'date-fns/locale';
 import React from 'react';
 
 // MUTE console error

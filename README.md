@@ -10,7 +10,7 @@ Complete Intl/I18n solution for React based on [Rosetty](https://github.com/qlaf
 //In your app.js file, add the following code:
 
 import { RosettyProvider } from 'rosetty-react';
-import fr from 'dayjs/locale/fr';
+import { fr } from 'date-fns/locale';
 
 const locales = { fr: { dict: {}, locale: fr } };
 const defaultLanguage = 'fr';
@@ -53,10 +53,10 @@ Return a component who instantiate the Rosetty Context.
 
 ### WARNING FOR LOCALE !
 
-**You need to import locale from `dayjs` package.**
+**You need to import locale from `date-fns` package.**
 
 ```js
-const fr = require('dayjs/locale/fr');
+const { enGB } = require('date-fns/locale');
 ```
 
 ## Maintain

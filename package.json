@@ -87,6 +87,6 @@
     "typescript": "5.3.3"
   },
   "dependencies": {
-    "rosetty": "^2.0.0"
+    "rosetty": "^3.0.0"
   }
 }

@@ -7,7 +7,7 @@ settings:
 dependencies:
   rosetty:
     specifier: ^3.0.0
-    version: 3.0.24
+    version: 3.0.25
 
 devDependencies:
   '@size-limit/preset-small-lib':
@@ -9421,8 +9421,8 @@ packages:
       templite: 1.2.0
     dev: false
 
-  /rosetty@3.0.24:
-    resolution: {integrity: sha512-fIi8I9VrNiqtedPuhTgTRpgFRSBGGyaR92ijo0f9hNvDAQdoUGGYEH8KspNmmKPBqhZVtrQcoxuR+zUArmFkQA==}
+  /rosetty@3.0.25:
+    resolution: {integrity: sha512-ynLdMLxda4PgFH3jsPMaaKNB0R0KHjC4IdZkpzm/BmtSaW1RWcB7oPfmj7PzMoKHgZX3mU0iGsFGIjHiWDpKXA==}
     engines: {node: '>=10'}
     dependencies:
       date-fns: 3.3.1

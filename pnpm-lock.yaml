@@ -33,7 +33,7 @@ devDependencies:
     version: 7.1.1(eslint@8.57.0)(typescript@5.4.2)
   date-fns:
     specifier: ^3.3
-    version: 3.3.1
+    version: 3.4.0
   eslint:
     specifier: 8.57.0
     version: 8.57.0
@@ -4054,8 +4054,8 @@ packages:
     resolution: {integrity: sha512-hBSVCvSmWC+QypYObzwGOd9wqdDpOt+0wl0KbU+R+uuZBS1jN8VsD1ss3irQDknRj5NvxiTF6oj/nDRnN/UQNw==}
     dev: true
 
-  /date-fns@3.3.1:
-    resolution: {integrity: sha512-y8e109LYGgoQDveiEBD3DYXKba1jWf5BA8YU1FL5Tvm0BTdEfy54WLCwnuYWZNnzzvALy/QQ4Hov+Q9RVRv+Zw==}
+  /date-fns@3.4.0:
+    resolution: {integrity: sha512-Akz4R8J9MXBsOgF1QeWeCsbv6pntT5KCPjU0Q9prBxVmWJYPLhwAIsNg3b0QAdr0ttiozYLD3L/af7Ra0jqYXw==}
 
   /debug@2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
@@ -9425,7 +9425,7 @@ packages:
     resolution: {integrity: sha512-ynLdMLxda4PgFH3jsPMaaKNB0R0KHjC4IdZkpzm/BmtSaW1RWcB7oPfmj7PzMoKHgZX3mU0iGsFGIjHiWDpKXA==}
     engines: {node: '>=10'}
     dependencies:
-      date-fns: 3.3.1
+      date-fns: 3.4.0
       rosetta: 1.1.0
     dev: false
 

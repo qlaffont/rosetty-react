@@ -10,7 +10,7 @@ importers:
     dependencies:
       rosetty:
         specifier: ^3.0.0
-        version: 3.0.49
+        version: 3.0.50
     devDependencies:
       '@size-limit/preset-small-lib':
         specifier: 11.1.3
@@ -4665,8 +4665,8 @@ packages:
     resolution: {integrity: sha512-3jQaCo2ySoDqLIPjy7+AvN3rluLfkG8A27hg0virL0gRAB5BJ3V35IBdkL/t6k1dGK0TVTyUEwXVUJsygyx4pA==}
     engines: {node: '>=8'}
 
-  rosetty@3.0.49:
-    resolution: {integrity: sha512-CDxmjs8OyL2glUjT04Iook+DEvbF+rL/Owl6UIynwreHrjGCSAIAtsaaFXz1KWMC8QV3wGFlBQRjaz0rdlJUXA==}
+  rosetty@3.0.50:
+    resolution: {integrity: sha512-hH9za8cMR6v6alCQagm7cmZJdNgbOm+QXXc3VJKZ/yRLHHQBYUsCDuk7GLKTme4VPmu1UlzoNBXWA7zB+Yxj2A==}
     engines: {node: '>=10'}
 
   rsvp@4.8.5:
@@ -11366,7 +11366,7 @@ snapshots:
       dlv: 1.1.3
       templite: 1.2.0
 
-  rosetty@3.0.49:
+  rosetty@3.0.50:
     dependencies:
       date-fns: 3.6.0
       rosetta: 1.1.0

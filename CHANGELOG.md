@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.0.160 (2024-06-25)
+
+
+### Bug Fixes
+
+* **deps:** update dependency rosetty to v3.0.68 ([17a73fb](https://github.com/qlaffont/rosetty-react/commit/17a73fb6a5fa2f904226b3ba1e3190d391d1d37a))
+
 ### 3.0.159 (2024-06-25)
 
 ### 3.0.158 (2024-06-21)

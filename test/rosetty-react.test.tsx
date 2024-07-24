@@ -58,7 +58,9 @@ describe('rosetty react', () => {
       'format',
       'formatRelative',
       'formatDistance',
+      'formatDistanceStrict',
       'formatDistanceToNow',
+      'formatDistanceToNowStrict',
       'formatDuration',
       'actualLang',
     ]);

@@ -7,7 +7,6 @@
 import '@testing-library/jest-dom';
 
 import { cleanup, renderHook } from '@testing-library/react';
-import { enGB, fr } from 'date-fns/locale';
 import React from 'react';
 
 // MUTE console error
@@ -37,7 +36,7 @@ describe('rosetty react', () => {
     //@ts-ignore
     const wrapper = ({ children }) => (
       <I18NContextProvider
-        languages={{ fr: { dict: {}, locale: fr } }}
+        languages={{ fr: { dict: {}, locale: "fr" } }}
         defaultLanguage="fr"
       >
         {children}
@@ -46,31 +45,14 @@ describe('rosetty react', () => {
     const { result } = renderHook(() => useRosetty(), { wrapper });
 
     expect(result.current.languages).toStrictEqual(['fr']);
-    expect(Object.keys(result.current)).toStrictEqual([
-      'changeLang',
-      'languages',
-      'getCurrentLang',
-      't',
-      'displayNames',
-      'listFormat',
-      'numberFormat',
-      'pluralRules',
-      'format',
-      'formatRelative',
-      'formatDistance',
-      'formatDistanceStrict',
-      'formatDistanceToNow',
-      'formatDistanceToNowStrict',
-      'formatDuration',
-      'actualLang',
-    ]);
+    expect(Object.keys(result.current)).toMatchSnapshot();
   });
-
+  
   it('should be able to return error', () => {
     //@ts-ignore
     const wrongWrapperLanguageNotValid = ({ children }) => (
       <I18NContextProvider
-        languages={{ fr: { dict: {}, locale: fr } }}
+        languages={{ fr: { dict: {}, locale: "fr" } }}
         defaultLanguage="en"
       >
         {children}
@@ -92,8 +74,8 @@ describe('rosetty react', () => {
     const wrapper = ({ children }) => (
       <I18NContextProvider
         languages={{
-          fr: { dict: {}, locale: fr },
-          en: { dict: {}, locale: enGB },
+          fr: { dict: {}, locale: "fr" },
+          en: { dict: {}, locale: "en-GB" },
         }}
         defaultLanguage="en"
       >

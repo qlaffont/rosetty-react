@@ -1,5 +1,5 @@
 {
-  "version": "3.0.269",
+  "version": "4.0.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -54,7 +54,6 @@
     "@types/react": "19.1.2",
     "@typescript-eslint/eslint-plugin": "7.16.0",
     "@typescript-eslint/parser": "7.16.0",
-    "date-fns": "^4.0.0",
     "eslint": "8.57.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-import": "2.29.1",
@@ -72,7 +71,7 @@
     "typescript": "5.5.3"
   },
   "dependencies": {
-    "rosetty": "^3.0.0"
+    "rosetty": "^4.0.0"
   },
   "packageManager": "pnpm@9.15.9"
 }

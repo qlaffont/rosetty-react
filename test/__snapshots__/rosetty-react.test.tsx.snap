@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`rosetty react should be able to use i18n 1`] = `
+[
+  "changeLang",
+  "languages",
+  "getCurrentLang",
+  "t",
+  "displayNames",
+  "listFormat",
+  "numberFormat",
+  "pluralRules",
+  "dateTimeFormat",
+  "relativeTimeFormat",
+  "collator",
+  "segmenter",
+  "durationFormat",
+  "actualLang",
+]
+`;

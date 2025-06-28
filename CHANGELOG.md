@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 4.0.6 (2025-06-28)
+
+
+### Bug Fixes
+
+* **deps:** update dependency rosetty to v4.0.8 ([#634](https://github.com/qlaffont/rosetty-react/issues/634)) ([87466de](https://github.com/qlaffont/rosetty-react/commit/87466debc2ea3fb2abff9f27d010ad2baf4e49f5))
+
 ### 4.0.5 (2025-06-17)
 
 

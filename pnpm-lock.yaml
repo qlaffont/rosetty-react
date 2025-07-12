@@ -10,7 +10,7 @@ importers:
     dependencies:
       rosetty:
         specifier: ^4.0.0
-        version: 4.0.9
+        version: 4.0.10
     devDependencies:
       '@testing-library/jest-dom':
         specifier: 6.6.3
@@ -4025,8 +4025,8 @@ packages:
     resolution: {integrity: sha512-3jQaCo2ySoDqLIPjy7+AvN3rluLfkG8A27hg0virL0gRAB5BJ3V35IBdkL/t6k1dGK0TVTyUEwXVUJsygyx4pA==}
     engines: {node: '>=8'}
 
-  rosetty@4.0.9:
-    resolution: {integrity: sha512-UPL2/SvE7grm1CC7xJm/izUvS5vrYO4cqko5FoqwWa7MnKb0qrNamCh5L09gTF56/1ZDD3hQ/aoSFSpmU5ykYw==}
+  rosetty@4.0.10:
+    resolution: {integrity: sha512-ZlIaYf6WloXgJsGtryBkx1mz2Uauy6pzuQ5NHpUC74acYGerXzwxZYCQY1wibSTy2G16+Q4UBHim4j274IPZCw==}
     engines: {node: '>=10'}
 
   rsvp@4.8.5:
@@ -10092,7 +10092,7 @@ snapshots:
       dlv: 1.1.3
       templite: 1.2.0
 
-  rosetty@4.0.9:
+  rosetty@4.0.10:
     dependencies:
       date-fns: 4.1.0
       rosetta: 1.1.0

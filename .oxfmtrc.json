@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/oxfmtrc.json",
+  "printWidth": 80,
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "endOfLine": "lf",
+  "sortPackageJson": false,
+  "ignorePatterns": []
+}

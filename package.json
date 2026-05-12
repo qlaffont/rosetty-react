@@ -1,8 +1,9 @@
 {
-  "version": "4.0.8",
+  "version": "5.0.0",
   "license": "MIT",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "name": "rosetty-react",
+  "description": "",
+  "author": "qlaffont",
   "repository": {
     "type": "git",
     "url": "https://github.com/qlaffont/rosetty-react.git"
@@ -11,67 +12,45 @@
     "url": "https://github.com/qlaffont/rosetty-react/issues",
     "email": "contact@qlaffont.com"
   },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "typings": "./dist/index.d.ts",
   "files": [
     "dist",
     "src"
   ],
+  "sideEffects": false,
   "engines": {
-    "node": ">=10"
+    "node": ">=18"
   },
+  "packageManager": "bun@1.3.13",
   "scripts": {
-    "start": "tsdx watch",
-    "build": "tsdx build",
-    "test": "jest",
-    "lint": "eslint src test",
-    "prepare": "tsdx build"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "tsdx lint"
-    }
-  },
-  "prettier": {
-    "printWidth": 80,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5"
-  },
-  "name": "rosetty-react",
-  "author": "qlaffont",
-  "module": "dist/rosetty-react.esm.js",
-  "jest": {
-    "collectCoverage": true,
-    "coverageReporters": [
-      "lcov"
-    ],
-    "preset": "ts-jest",
-    "testEnvironment": "jsdom"
-  },
-  "devDependencies": {
-    "@testing-library/jest-dom": "6.6.3",
-    "@testing-library/react": "15.0.7",
-    "@types/jest": "^30.0.0",
-    "@types/react": "19.1.8",
-    "@typescript-eslint/eslint-plugin": "7.16.0",
-    "@typescript-eslint/parser": "7.16.0",
-    "eslint": "8.57.0",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-import": "2.29.1",
-    "eslint-plugin-prettier": "5.1.3",
-    "eslint-plugin-simple-import-sort": "12.1.1",
-    "husky": "9.0.11",
-    "jest": "29.7.0",
-    "jest-environment-jsdom": "^29.5.0",
-    "prettier": "3.3.3",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "ts-jest": "^29.1.0",
-    "tsdx": "0.14.1",
-    "tslib": "2.6.3",
-    "typescript": "5.5.3"
+    "start": "bun x bunup --watch",
+    "build": "bun x bunup",
+    "test": "bun test",
+    "test:coverage": "bun test --coverage --coverage-reporter=lcov --coverage-dir=coverage",
+    "lint": "oxlint src test bunup.config.ts",
+    "format": "oxfmt src test bunup.config.ts bunfig.toml .oxlintrc.json .oxfmtrc.json",
+    "format:check": "oxfmt src test bunup.config.ts bunfig.toml .oxlintrc.json .oxfmtrc.json --check",
+    "prepare": "bun run build"
   },
   "dependencies": {
-    "rosetty": "^4.0.0"
+    "rosetty": "^5.0.0"
   },
-  "packageManager": "pnpm@9.15.9"
+  "devDependencies": {
+    "@happy-dom/global-registrator": "^20.9.0",
+    "@testing-library/react": "16.3.2",
+    "@types/bun": "^1.3.13",
+    "@types/react": "19.2.14",
+    "bunup": "0.16.31",
+    "happy-dom": "^20.9.0",
+    "oxfmt": "0.49.0",
+    "oxlint": "1.64.0",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "typescript": "6.0.3"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0"
+  }
 }

@@ -7,14 +7,10 @@ on:
 
 jobs:
   build:
-    name: Build, lint, and test on Node ${{ matrix.node }} and ${{ matrix.os }}
+    name: Build, lint, and test (Bun)
 
     if: startsWith(github.head_ref, 'renovate/')
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        node: ["20.x"]
-        os: [ubuntu-latest]
+    runs-on: ubuntu-latest
 
     steps:
       - uses: dorny/paths-filter@v3
@@ -23,8 +19,15 @@ jobs:
           filters: |
             src:
               - 'src/**'
+              - 'test/**'
               - 'package.json'
-              - 'pnpm-lock.yaml'
+              - 'bun.lock'
+              - 'bun.lockb'
+              - 'bunup.config.ts'
+              - '.oxlintrc.json'
+              - '.oxfmtrc.json'
+              - 'bunfig.toml'
+              - 'tsconfig.json'
       - name: Checkout repo
         if: steps.changes.outputs.src == 'true'
         uses: actions/checkout@v4
@@ -34,31 +37,27 @@ jobs:
           git config user.name "${{ secrets.USER_NAME }}"
           git config user.email "${{ secrets.USER_EMAIL }}"
 
-      - name: Use Node ${{ matrix.node }}
+      - name: Setup Bun
         if: steps.changes.outputs.src == 'true'
-        uses: actions/setup-node@v4
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: ${{ matrix.node }}
+          bun-version: 1.3.10
 
-      - name: Install PNPM
+      - name: Install dependencies
         if: steps.changes.outputs.src == 'true'
-        uses: pnpm/action-setup@v4.1.0
-
-      - name: Install deps and build (with cache)
-        if: steps.changes.outputs.src == 'true'
-        run: pnpm install --no-frozen-lockfile
+        run: bun install --frozen-lockfile
 
       - name: Lint
         if: steps.changes.outputs.src == 'true'
-        run: pnpm lint
+        run: bun run lint
 
       - name: Test
         if: steps.changes.outputs.src == 'true'
-        run: pnpm test -- --ci --coverage --maxWorkers=2
+        run: bun run test
 
       - name: Build
         if: steps.changes.outputs.src == 'true'
-        run: pnpm build
+        run: bun run build
 
       - name: Bump version
         if: steps.changes.outputs.src == 'true'

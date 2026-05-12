@@ -1,6 +1,11 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { createContext, useContext, useMemo, useState } from 'react';
-import { Language, rosetty, RosettyReturn } from 'rosetty';
+import {
+  createContext,
+  useContext,
+  useMemo,
+  useState,
+  type ReactNode,
+} from 'react';
+import { rosetty, type Language, type RosettyReturn } from 'rosetty';
 
 export const RosettyContext = createContext({});
 
@@ -10,15 +15,16 @@ export const RosettyProvider = ({
   defaultLanguage,
   translateFallback,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
   languages: Record<string, Language>;
   defaultLanguage: string;
   translateFallback?: boolean;
 }) => {
   const r = useMemo(
     () => rosetty(languages, defaultLanguage, translateFallback),
-    [languages]
+    [languages, defaultLanguage, translateFallback],
   );
+
   const [actualLang, setActualLang] = useState(defaultLanguage);
 
   const providerReturn = useMemo(
@@ -27,11 +33,10 @@ export const RosettyProvider = ({
       actualLang,
       changeLang: (lang: string) => {
         r.changeLang(lang);
-        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
         setActualLang(r.getCurrentLang()!);
       },
     }),
-    [actualLang, r]
+    [actualLang, r],
   );
 
   return (
@@ -41,7 +46,7 @@ export const RosettyProvider = ({
   );
 };
 
-type AnyObject = Record<string, any>;
+type AnyObject = Record<string, unknown>;
 
 export function useRosetty<T extends AnyObject>(): RosettyReturn<T> & {
   actualLang: string | undefined;

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/oxlintrc.json",
+  "plugins": ["typescript", "react"],
+  "categories": {
+    "correctness": "error"
+  },
+  "rules": {
+    "typescript/no-explicit-any": "allow"
+  },
+  "env": {
+    "builtin": true,
+    "browser": true
+  },
+  "ignorePatterns": ["dist", "coverage", "node_modules"]
+}
